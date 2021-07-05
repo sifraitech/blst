@@ -1,5 +1,5 @@
 [package]
-name = "blst"
+name = "blst_portable"
 version = "0.3.4"
 authors = ["sean-sn <sean@supranational.net>"]
 edition = "2018"
@@ -21,9 +21,8 @@ include = [
 ]
 
 [features]
-# By default, compile with ADX extension if the host supports it.
-# Binary can be executed on systems similar to the host.
-default = []
+# By default, compile without ADX extension.
+default = ['portable']
 # Compile in portable mode, without ISA extensions.
 # Binary can be executed on all systems.
 portable = []
